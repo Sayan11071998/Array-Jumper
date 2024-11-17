@@ -164,6 +164,7 @@
     <ClInclude Include="header\Event\EventService.h" />
     <ClInclude Include="header\Level\BlockType.h" />
     <ClInclude Include="header\Level\LevelData.h" />
+    <ClInclude Include="header\Player\MovementDirection.h" />
     <ClInclude Include="header\Sound\SoundService.h" />
     <ClInclude Include="header\Main\GameService.h" />
     <ClInclude Include="header\Graphics\GraphicService.h" />
