@@ -7,7 +7,7 @@ namespace Player
 	class PlayerView;
 	class PlayerModel;
 	enum class PlayerState;
-	
+
 	class PlayerController
 	{
 	private:
@@ -16,12 +16,13 @@ namespace Player
 		
 		Event::EventService* event_service;
 
+		void destroy();
+
 		void readInput();
 		void move(MovementDirection direction);
+		void jump(MovementDirection direction);
 		bool isPositionInBound(int targetPosition);
-
-		void destroy();
-		void resetPlayer();
+		void onDeath();
 
 	public:
 		PlayerController();
@@ -35,5 +36,9 @@ namespace Player
 		void setPlayerState(PlayerState new_player_state);
 
 		int getCurrentPosition();
+		int getCurrentLives();
+
+		void resetPlayer();
+		void takeDamage();
 	};
 }

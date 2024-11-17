@@ -18,6 +18,6 @@ namespace Level
             BlockType::OBSTACLE_TWO,
             BlockType::TWO,
             BlockType::ONE,
-            BlockType::TARGET };
+            BlockType::TARGET};
     };
 }
