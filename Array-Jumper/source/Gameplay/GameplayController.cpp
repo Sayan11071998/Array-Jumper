@@ -12,15 +12,15 @@ namespace Gameplay
 	using namespace Main;
 
 	void GameplayController::intialize()
-	{//Yet to Implement
+	{
 	}
 
 	void GameplayController::update()
-	{//Yet to Implement
+	{
 	}
 
 	void GameplayController::render()
-	{//Yet to Implement
+	{
 	}
 
 	void GameplayController::onPositionChanged(int position)

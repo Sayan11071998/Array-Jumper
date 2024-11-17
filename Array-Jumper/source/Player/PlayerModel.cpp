@@ -4,7 +4,6 @@ namespace Player
 {
 	void Player::PlayerModel::initialize()
 	{
-		//Yet to implement
 	}
 
 	PlayerState PlayerModel::getPlayerState()

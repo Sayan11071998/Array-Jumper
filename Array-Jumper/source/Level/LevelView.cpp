@@ -128,14 +128,8 @@ namespace Level
 	{
 		float screenWidth = static_cast<float>(game_window->getSize().x);
 		int numBoxes = LevelData::NUMBER_OF_BOXES;
-		
-		//Each Box has a Gap on it's left, 1 extra gap for last block's right side
 		int numGaps = numBoxes + 1; 
-
-		//Total space consumed by all gaps
 		float totalSpaceByGaps = box_dimensions.box_spacing_percentage * static_cast<float>(numGaps); 
-
-		//Total space consumed by boxes and gaps
 		float totalSpace = numBoxes + totalSpaceByGaps;
 		
 		box_dimensions.box_width = screenWidth / (totalSpace);
@@ -190,5 +184,4 @@ namespace Level
 		delete(obstacle_one_overlay_image);
 		delete(obstacle_two_overlay_image);
 	}
-
 }

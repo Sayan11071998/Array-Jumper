@@ -5,8 +5,6 @@
 #include "../../header/Level/LevelModel.h"
 #include "../../header/Sound/SoundService.h"
 
-
-
 namespace Player
 {
 	using namespace Global;

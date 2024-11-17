@@ -1,7 +1,6 @@
 #include "../../header/Player/PlayerService.h"
 #include "../../header/Player/PlayerController.h"
 
-
 namespace Player
 {
 	PlayerService::PlayerService() { player_controller = new PlayerController(); }

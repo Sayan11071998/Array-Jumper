@@ -2,7 +2,6 @@
 #include "../../header/Level/LevelModel.h"
 #include "../../header/UI/UIElement/ImageView.h"
 
-
 namespace Player
 {
 	class PlayerController;

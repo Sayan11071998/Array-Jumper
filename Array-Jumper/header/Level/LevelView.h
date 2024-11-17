@@ -38,6 +38,7 @@ namespace Level
 		void calculateBoxWidthHeight();
 		void calculateBoxSpacing();
 		UI::UIElement::ImageView* getBoxOverlayImage(BlockType block_type);
+
 	public:
 		LevelView(LevelController* controller);
 		~LevelView();

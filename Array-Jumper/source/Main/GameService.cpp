@@ -36,13 +36,9 @@ namespace Main
 		service_locator->getUIService()->showSplashScreen();
 	}
 
-	// Main Game Loop.
 	void GameService::update()
 	{
-		// Process Events.
 		service_locator->getEventService()->processEvents();
-
-		// Update Game Logic.
 		service_locator->update();
 	}
 
