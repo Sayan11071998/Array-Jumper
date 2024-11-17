@@ -1,27 +1,29 @@
 #pragma once
+#include "../../header/Level/LevelModel.h"
 #include "../../header/UI/UIElement/ImageView.h"
+
 
 namespace Player
 {
-	using namespace UI::UIElement;
 	class PlayerController;
-	
 	class PlayerView
 	{
 	private:
-		UI::UIElement::ImageView* player_image;
+		// TODO: Fix spacing. References grouped together + properties grouped together. 
 		sf::RenderWindow* game_window;
 		PlayerController* player_controller;
-		
+		UI::UIElement::ImageView* player_image;
+
 		float player_height;
 		float player_width;
+		Level::BoxDimensions current_box_dimensions;
 
-		void initializePlayerImage(); //Initialize player_image
-		void drawPlayer(); //Called every frame to render the sprite on the screen
-		void loadPlayer(); //Loads the information needed to render the player
-		void calculatePlayerDimension(); //Calculate the size of image
-		void updatePlayerPosition(); //Updates the Player Sprite's position on each frame
-		sf::Vector2f calculatePlayerPosition();
+		void initializePlayerImage();
+		void drawPlayer();
+		void loadPlayer();
+		void calculatePlayerDimensions();
+		void updatePlayerPosition();
+		sf::Vector2f calulcatePlayerPosition();
 
 	public:
 		PlayerView(PlayerController* controller);
@@ -30,5 +32,7 @@ namespace Player
 		void initialize();
 		void update();
 		void render();
-	};
-}
+
+	};	
+}		
+

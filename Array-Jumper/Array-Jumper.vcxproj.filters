@@ -39,19 +39,19 @@
     <ClCompile Include="source\Global\ServiceLocator.cpp" />
     <ClCompile Include="source\UI\Instructions\InstructionsUIController.cpp" />
     <ClCompile Include="source\Global\Config.cpp" />
-    <ClCompile Include="source\UI\UIElement\AnimatedImageView.cpp" />
-    <ClCompile Include="source\UI\UIElement\ButtonView.cpp" />
-    <ClCompile Include="source\UI\UIElement\ImageView.cpp" />
-    <ClCompile Include="source\UI\UIElement\TextView.cpp" />
-    <ClCompile Include="source\UI\UIElement\UIView.cpp" />
-    <ClCompile Include="source\Player\PlayerController.cpp" />
-    <ClCompile Include="source\Player\PlayerModel.cpp" />
     <ClCompile Include="source\Player\PlayerService.cpp" />
+    <ClCompile Include="source\Player\PlayerController.cpp" />
     <ClCompile Include="source\Player\PlayerView.cpp" />
-    <ClCompile Include="source\Level\LevelModel.cpp" />
+    <ClCompile Include="source\Player\PlayerModel.cpp" />
     <ClCompile Include="source\Level\LevelView.cpp" />
     <ClCompile Include="source\Level\LevelController.cpp" />
     <ClCompile Include="source\Level\LevelService.cpp" />
+    <ClCompile Include="source\Level\LevelModel.cpp" />
+    <ClCompile Include="source\UI\UI\UIElement\AnimatedImageView.cpp" />
+    <ClCompile Include="source\UI\UI\UIElement\ButtonView.cpp" />
+    <ClCompile Include="source\UI\UI\UIElement\ImageView.cpp" />
+    <ClCompile Include="source\UI\UI\UIElement\TextView.cpp" />
+    <ClCompile Include="source\UI\UI\UIElement\UIView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\Main\GameService.h">
@@ -77,21 +77,20 @@
     <ClInclude Include="header\UI\Instructions\InstructionsUIController.h" />
     <ClInclude Include="header\Global\ServiceLocator.h" />
     <ClInclude Include="header\Global\Config.h" />
+    <ClInclude Include="header\Player\PlayerModel.h" />
+    <ClInclude Include="header\Player\PlayerView.h" />
+    <ClInclude Include="header\Player\PlayerController.h" />
+    <ClInclude Include="header\Player\PlayerService.h" />
+    <ClInclude Include="header\Level\LevelView.h" />
+    <ClInclude Include="header\Level\LevelController.h" />
+    <ClInclude Include="header\Level\LevelService.h" />
+    <ClInclude Include="header\Level\LevelData.h" />
+    <ClInclude Include="header\Level\LevelModel.h" />
     <ClInclude Include="header\UI\UIElement\AnimatedImageView.h" />
     <ClInclude Include="header\UI\UIElement\ButtonView.h" />
     <ClInclude Include="header\UI\UIElement\ImageView.h" />
     <ClInclude Include="header\UI\UIElement\TextView.h" />
     <ClInclude Include="header\UI\UIElement\UIView.h" />
-    <ClInclude Include="header\Player\PlayerController.h" />
-    <ClInclude Include="header\Player\PlayerModel.h" />
-    <ClInclude Include="header\Player\PlayerService.h" />
-    <ClInclude Include="header\Player\PlayerView.h" />
-    <ClInclude Include="header\Level\LevelModel.h" />
-    <ClInclude Include="header\Level\LevelController.h" />
-    <ClInclude Include="header\Level\LevelView.h" />
-    <ClInclude Include="header\Level\LevelService.h" />
-    <ClInclude Include="header\Level\BlockType.h" />
-    <ClInclude Include="header\Level\LevelData.h" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="assets\sounds\background_music.mp3" />
@@ -149,6 +148,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="assets\textures\quit_button.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\textures\target.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
