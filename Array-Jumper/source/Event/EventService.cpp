@@ -8,7 +8,10 @@ namespace Event
     using namespace Global;
     using namespace Graphics;
 
-    EventService::EventService() { game_window = nullptr; }
+    EventService::EventService()
+    {
+        game_window = nullptr;
+    }
 
     EventService::~EventService() = default;
 
@@ -32,7 +35,6 @@ namespace Event
     {
         if (isGameWindowOpen())
         {
-            // Iterate over all events in the queue.
             while (game_window->pollEvent(game_event))
             {
                 if (gameWindowWasClosed() || hasQuitGame())

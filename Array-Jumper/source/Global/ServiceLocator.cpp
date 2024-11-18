@@ -26,7 +26,10 @@ namespace Global
 		createServices();
 	}
 
-	ServiceLocator::~ServiceLocator() { clearAllServices(); }
+	ServiceLocator::~ServiceLocator()
+	{
+		clearAllServices();
+	}
 
 	void ServiceLocator::createServices()
 	{
@@ -54,24 +57,28 @@ namespace Global
 	{
 		graphic_service->update();
 		event_service->update();
+
 		if (GameService::getGameState() == GameState::GAMEPLAY)
 		{
 			level_service->update();
 			player_service->update();
 			gameplay_service->update();
 		}
+
 		ui_service->update();
 	}
 
 	void ServiceLocator::render()
 	{
 		graphic_service->render();
+
 		if (GameService::getGameState() == GameState::GAMEPLAY)
 		{
 			level_service->render();
 			player_service->render();
 			gameplay_service->render();
 		}
+
 		ui_service->render();
 	}
 
@@ -92,17 +99,38 @@ namespace Global
 		return &instance;
 	}
 
-	GraphicService* ServiceLocator::getGraphicService() { return graphic_service; }
+	GraphicService* ServiceLocator::getGraphicService()
+	{
+		return graphic_service;
+	}
 
-	EventService* ServiceLocator::getEventService() { return event_service; }
+	EventService* ServiceLocator::getEventService()
+	{
+		return event_service;
+	}
 
-	SoundService* ServiceLocator::getSoundService() { return sound_service; }
+	SoundService* ServiceLocator::getSoundService()
+	{
+		return sound_service;
+	}
 
-	UIService* ServiceLocator::getUIService() { return ui_service; }
+	UIService* ServiceLocator::getUIService()
+	{
+		return ui_service;
+	}
 
-	PlayerService* ServiceLocator::getPlayerService() { return player_service; }
+	PlayerService* ServiceLocator::getPlayerService()
+	{
+		return player_service;
+	}
 
-	LevelService* ServiceLocator::getLevelService() { return level_service; }
+	LevelService* ServiceLocator::getLevelService()
+	{
+		return level_service;
+	}
 
-	GameplayService* ServiceLocator::getGameplayService() { return gameplay_service; }
+	GameplayService* ServiceLocator::getGameplayService()
+	{
+		return gameplay_service;
+	}
 }

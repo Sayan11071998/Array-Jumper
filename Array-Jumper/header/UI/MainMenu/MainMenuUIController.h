@@ -11,7 +11,6 @@ namespace UI
 		class MainMenuUIController
 		{
 		private:
-
 			// Constants:
 			const float button_width = 400.f;
 			const float button_height = 140.f;

@@ -8,7 +8,10 @@ namespace Level
 		level_controller = new LevelController();
 	}
 
-	LevelService::~LevelService() { destroy(); }
+	LevelService::~LevelService()
+	{
+		destroy();
+	}
 
 	void LevelService::intialize()
 	{
@@ -35,6 +38,26 @@ namespace Level
 		return level_controller->getCurrentBoxValue(currentPosition);
 	}
 
+	bool LevelService::isLastLevel()
+	{
+		return level_controller->isLastLevel();
+	}
+
+	void LevelService::loadNextLevel()
+	{
+		level_controller->loadNextLevel();
+	}
+
+	int LevelService::getCurrentLevelNumber()
+	{
+		return level_controller->getCurrentLevelNumber();
+	}
+
+	void LevelService::resetLevels()
+	{
+		level_controller->reset();
+	}
+	
 	void LevelService::destroy()
 	{
 		delete(level_controller);

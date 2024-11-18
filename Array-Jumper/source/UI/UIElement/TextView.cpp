@@ -11,7 +11,6 @@ namespace UI
 		sf::Font TextView::font_zorque;
 
 		TextView::TextView() = default;
-
 		TextView::~TextView() = default;
 
 		void TextView::initialize(sf::String text_value, sf::Vector2f position, FontType font_type, int font_size, sf::Color color)
@@ -35,9 +34,7 @@ namespace UI
 			UIView::render();
 
 			if (ui_state == UIState::VISIBLE)
-			{
 				game_window->draw(text);
-			}
 		}
 
 		void TextView::initializeTextView()

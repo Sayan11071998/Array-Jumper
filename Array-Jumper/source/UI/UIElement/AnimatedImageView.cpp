@@ -5,7 +5,6 @@ namespace UI
     namespace UIElement
     {
         AnimatedImageView::AnimatedImageView() = default;
-
         AnimatedImageView::~AnimatedImageView() = default;
 
         void AnimatedImageView::initialize(sf::String texture_path, float image_width, float image_height, sf::Vector2f position)
@@ -53,9 +52,7 @@ namespace UI
         void AnimatedImageView::handleAnimationProgress()
         {
             if (elapsed_duration >= animation_duration && callback_function)
-            {
                 callback_function();
-            }
         }
 
         void AnimatedImageView::updateAnimation()

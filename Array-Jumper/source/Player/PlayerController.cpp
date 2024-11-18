@@ -18,7 +18,10 @@ namespace Player
 		player_view = new PlayerView(this);
 	}
 
-	PlayerController::~PlayerController() { destroy(); }
+	PlayerController::~PlayerController()
+	{
+		destroy();
+	}
 
 	void PlayerController::initialize()
 	{
@@ -70,7 +73,6 @@ namespace Player
 			player_model->resetPosition();
 	}
 
-
 	void PlayerController::destroy()
 	{
 		delete(player_model);
@@ -91,6 +93,7 @@ namespace Player
 			else
 				move(MovementDirection::FORWARD);
 		}
+
 		if (event_service->pressedLeftArrowKey() || event_service->pressedAKey())
 		{
 			if (event_service->heldSpaceKey())
@@ -98,7 +101,6 @@ namespace Player
 			else
 				move(MovementDirection::BACKWARD);
 		}
-
 	}
 
 	void PlayerController::move(MovementDirection direction)

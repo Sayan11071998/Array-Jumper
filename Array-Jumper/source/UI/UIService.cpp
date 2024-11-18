@@ -4,8 +4,6 @@
 #include "../../header/Global/ServiceLocator.h"
 #include "../../header/UI/UIElement/TextView.h"
 
-
-
 namespace UI
 {
     using namespace Main;

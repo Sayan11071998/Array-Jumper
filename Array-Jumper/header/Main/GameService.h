@@ -7,7 +7,6 @@
 
 namespace Main
 {
-
 	enum class GameState
 	{
 		BOOT,
@@ -21,7 +20,6 @@ namespace Main
 	class GameService
 	{
 	private:
-
 		static GameState current_state;
 		Global::ServiceLocator* service_locator;
 		sf::RenderWindow* game_window;
