@@ -2,14 +2,12 @@
 #include "../../header/Level/LevelModel.h"
 #include "../../header/UI/UIElement/ImageView.h"
 
-
 namespace Player
 {
 	class PlayerController;
 	class PlayerView
 	{
 	private:
-		// TODO: Fix spacing. References grouped together + properties grouped together. 
 		sf::RenderWindow* game_window;
 		PlayerController* player_controller;
 		UI::UIElement::ImageView* player_image;

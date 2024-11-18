@@ -4,8 +4,6 @@
 #include "../../header/Player/PlayerController.h"
 #include "../../header/Player/PlayerModel.h"
 
-
-
 namespace Player
 {
 	using namespace Global;
@@ -76,10 +74,8 @@ namespace Player
 		return sf::Vector2f(xPosition, yPosition);
 	}
 
-
 	void PlayerView::drawPlayer()
 	{
 		player_image->render();
 	}
-
 }
