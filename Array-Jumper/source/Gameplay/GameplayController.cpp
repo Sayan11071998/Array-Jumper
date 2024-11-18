@@ -23,6 +23,13 @@ namespace Gameplay
 	{
 	}
 
+	void GameplayController::startGame()
+	{
+		GameService::setGameState(GameState::GAMEPLAY);
+		return ServiceLocator::getInstance()->getLevelService()->resetLevels();
+		return ServiceLocator::getInstance()->getPlayerService()->resetPlayer();
+	}
+
 	void GameplayController::onPositionChanged(int position)
 	{
 		BlockType value = ServiceLocator::getInstance()->getLevelService()->getCurrentBoxValue(position);
@@ -62,7 +69,30 @@ namespace Gameplay
 	{
 		ServiceLocator::getInstance()->getPlayerService()->levelComplete();
 		ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::LEVEL_COMPLETE);
+		
+		if (isLastLevel())
+		{
+			gameWon();
+			return;
+		}
+
+		loadNextLevel();
+	}
+
+	bool GameplayController::isLastLevel()
+	{
+		return ServiceLocator::getInstance()->getLevelService()->isLastLevel();
+	}
+
+	void GameplayController::loadNextLevel()
+	{
+		ServiceLocator::getInstance()->getLevelService()->loadNextLevel();
+	}
+
+	void GameplayController::gameWon()
+	{
 		GameService::setGameState(GameState::CREDITS);
+		ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::GAME_WON);
 	}
 
 	void GameplayController::gameOver()

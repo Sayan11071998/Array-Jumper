@@ -13,6 +13,7 @@ namespace Level
 		LevelController* level_controller;
 
 		void destroy();
+	
 	public:
 		LevelService();
 		~LevelService();
@@ -23,6 +24,12 @@ namespace Level
 
 		BoxDimensions getBoxDimensions();
 		BlockType getCurrentBoxValue(int currentPosition);
+
+		bool isLastLevel();
+		void loadNextLevel();
+		int getCurrentLevelNumber();
+
+		void resetLevels();
 	};
 }
 

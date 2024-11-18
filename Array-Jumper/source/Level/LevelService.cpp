@@ -8,7 +8,10 @@ namespace Level
 		level_controller = new LevelController();
 	}
 
-	LevelService::~LevelService() { destroy(); }
+	LevelService::~LevelService()
+	{
+		destroy();
+	}
 
 	void LevelService::intialize()
 	{
@@ -33,6 +36,24 @@ namespace Level
 	BlockType LevelService::getCurrentBoxValue(int currentPosition)
 	{
 		return level_controller->getCurrentBoxValue(currentPosition);
+	}
+
+	bool LevelService::isLastLevel()
+	{
+		return level_controller->isLastLevel();
+	}
+
+	void LevelService::loadNextLevel()
+	{
+	}
+
+	int LevelService::getCurrentLevelNumber()
+	{
+		return 0;
+	}
+
+	void LevelService::resetLevels()
+	{
 	}
 
 	void LevelService::destroy()
