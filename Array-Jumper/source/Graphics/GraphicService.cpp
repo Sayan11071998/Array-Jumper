@@ -1,14 +1,19 @@
 #include "../../header/Graphics/GraphicService.h"
 #include "../../header/Global/Config.h"
 
-
 namespace Graphics
 {
 	using namespace Global;
 	
-	GraphicService::GraphicService() { game_window = nullptr; }
+	GraphicService::GraphicService()
+	{
+		game_window = nullptr;
+	}
 
-	GraphicService::~GraphicService() { onDestroy(); }
+	GraphicService::~GraphicService()
+	{
+		onDestroy();
+	}
 
 	void GraphicService::initialize()
 	{
@@ -16,8 +21,8 @@ namespace Graphics
 		setFrameRate(frame_rate);
 	}
 
-	void GraphicService::update(){}
-	void GraphicService::render(){}
+	void GraphicService::update() {}
+	void GraphicService::render() {}
 
 	sf::RenderWindow* GraphicService::createGameWindow()
 	{
@@ -31,11 +36,20 @@ namespace Graphics
 		video_mode = *(new sf::VideoMode(game_window_width, game_window_height, sf::VideoMode::getDesktopMode().bitsPerPixel));
 	}
 
-	void GraphicService::setFrameRate(int frame_rate_to_set) { game_window->setFramerateLimit(frame_rate_to_set); }
+	void GraphicService::setFrameRate(int frame_rate_to_set)
+	{
+		game_window->setFramerateLimit(frame_rate_to_set);
+	}
 
-	bool GraphicService::isGameWindowOpen() { return game_window->isOpen(); }
+	bool GraphicService::isGameWindowOpen()
+	{
+		return game_window->isOpen();
+	}
 
-	sf::RenderWindow* GraphicService::getGameWindow() { return game_window; }
+	sf::RenderWindow* GraphicService::getGameWindow()
+	{
+		return game_window;
+	}
 
 	void GraphicService::onDestroy()
 	{

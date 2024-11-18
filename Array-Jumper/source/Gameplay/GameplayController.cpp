@@ -11,24 +11,9 @@ namespace Gameplay
 	using namespace Sound;
 	using namespace Main;
 
-	void GameplayController::intialize()
-	{
-	}
-
-	void GameplayController::update()
-	{
-	}
-
-	void GameplayController::render()
-	{
-	}
-
-	void GameplayController::startGame()
-	{
-		GameService::setGameState(GameState::GAMEPLAY);
-		return ServiceLocator::getInstance()->getLevelService()->resetLevels();
-		return ServiceLocator::getInstance()->getPlayerService()->resetPlayer();
-	}
+	void GameplayController::intialize() {}
+	void GameplayController::update() {}
+	void GameplayController::render() {}
 
 	void GameplayController::onPositionChanged(int position)
 	{
@@ -69,8 +54,8 @@ namespace Gameplay
 	{
 		ServiceLocator::getInstance()->getPlayerService()->levelComplete();
 		ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::LEVEL_COMPLETE);
-		
-		if (isLastLevel())
+
+		if(isLastLevel())
 		{
 			gameWon();
 			return;
@@ -78,15 +63,17 @@ namespace Gameplay
 
 		loadNextLevel();
 	}
-
+	
 	bool GameplayController::isLastLevel()
 	{
 		return ServiceLocator::getInstance()->getLevelService()->isLastLevel();
 	}
 
-	void GameplayController::loadNextLevel()
+	void GameplayController::startGame()
 	{
-		ServiceLocator::getInstance()->getLevelService()->loadNextLevel();
+		GameService::setGameState(GameState::GAMEPLAY);
+		return ServiceLocator::getInstance()->getLevelService()->resetLevels();
+		return ServiceLocator::getInstance()->getPlayerService()->resetPlayer();
 	}
 
 	void GameplayController::gameWon()
@@ -94,6 +81,12 @@ namespace Gameplay
 		GameService::setGameState(GameState::CREDITS);
 		ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::GAME_WON);
 	}
+
+	void GameplayController::loadNextLevel()
+	{
+		ServiceLocator::getInstance()->getLevelService()->loadNextLevel();
+	}
+
 
 	void GameplayController::gameOver()
 	{

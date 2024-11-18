@@ -1,6 +1,5 @@
 #include "../../header/Level/LevelView.h"
 #include "../../header/Level/LevelModel.h"
-#include "../../header/Level/LevelData.h"
 #include "../../header/Global/ServiceLocator.h"
 #include "../../header/Global/Config.h"
 
@@ -62,7 +61,6 @@ namespace Level
 		background_image->initialize(Config::array_jumper_bg_texture_path, game_window->getSize().x, game_window->getSize().y, sf::Vector2f(0, 0));
 		background_image->setImageAlpha(background_alpha);
 
-		
 		box_image->initialize(Config::box_texture_path, box_dimensions.box_width, box_dimensions.box_height, sf::Vector2f(0, 0));
 		target_overlay_image->initialize(Config::target_texture_path, box_dimensions.box_width, box_dimensions.box_height, sf::Vector2f(0, 0));
 		letter_one_overlay_image->initialize(Config::letter_one_texture_path, box_dimensions.box_width, box_dimensions.box_height, sf::Vector2f(0, 0));
@@ -75,7 +73,6 @@ namespace Level
 	void LevelView::updateImages()
 	{
 		background_image->update();
-
 		box_image->update();
 		target_overlay_image->update();
 		letter_one_overlay_image->update();
@@ -101,18 +98,16 @@ namespace Level
 
 	void LevelView::drawBox(sf::Vector2f position)
 	{
-			box_image->setPosition(position);
-			box_image->render();
+		box_image->setPosition(position);
+		box_image->render();
 	}
 
 	void LevelView::drawBoxValue(sf::Vector2f position, BlockType box_value)
 	{
-			ImageView* image = getBoxOverlayImage(box_value);
-			image->setPosition(position);
-			image->render();
+		ImageView* image = getBoxOverlayImage(box_value);
+		image->setPosition(position);
+		image->render();
 	}
-
-
 
 	void LevelView::calculateBoxDimensions()
 	{
@@ -120,14 +115,13 @@ namespace Level
 
 		calculateBoxWidthHeight();
 		calculateBoxSpacing();
-
 	}
-
 
 	void LevelView::calculateBoxWidthHeight()
 	{
 		float screenWidth = static_cast<float>(game_window->getSize().x);
 		int numBoxes = LevelData::NUMBER_OF_BOXES;
+
 		int numGaps = numBoxes + 1; 
 		float totalSpaceByGaps = box_dimensions.box_spacing_percentage * static_cast<float>(numGaps); 
 		float totalSpace = numBoxes + totalSpaceByGaps;
@@ -154,19 +148,14 @@ namespace Level
 		{
 		case BlockType::OBSTACLE_ONE:
 			return obstacle_one_overlay_image;
-
 		case BlockType::OBSTACLE_TWO:
 			return obstacle_two_overlay_image;
-
 		case BlockType::ONE:
 			return letter_one_overlay_image;
-
 		case BlockType::TWO:
 			return letter_two_overlay_image;
-
 		case BlockType::THREE:
 			return letter_three_overlay_image;
-
 		case BlockType::TARGET:
 			return target_overlay_image;
 		}

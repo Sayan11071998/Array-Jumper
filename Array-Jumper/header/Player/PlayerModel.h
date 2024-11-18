@@ -11,7 +11,6 @@ namespace Player
 	class PlayerModel
 	{
 	private: 
-			
 		const int max_lives = 3;
 
 		PlayerState player_state;
@@ -19,7 +18,6 @@ namespace Player
 		int current_lives;
 			
 	public:
-
 		void initialize();
 			
 		PlayerState getPlayerState();

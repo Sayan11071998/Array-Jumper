@@ -2,9 +2,7 @@
 
 namespace Player
 {
-	void Player::PlayerModel::initialize()
-	{
-	}
+	void Player::PlayerModel::initialize() {}
 
 	PlayerState PlayerModel::getPlayerState()
 	{
@@ -33,5 +31,3 @@ namespace Player
 	void PlayerModel::decreamentLife() { current_lives--; }
 	int PlayerModel::getCurrentLives() { return current_lives; }
 }
-
-

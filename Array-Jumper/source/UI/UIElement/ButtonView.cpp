@@ -11,7 +11,6 @@ namespace UI
         using namespace Global;
 
         ButtonView::ButtonView() = default;
-
         ButtonView::~ButtonView() = default;
 
         void ButtonView::initialize(sf::String title, sf::String texture_path, float button_width, float button_height, sf::Vector2f position)
@@ -30,9 +29,7 @@ namespace UI
             ImageView::update();
 
             if (ui_state == UIState::VISIBLE)
-            {
                 handleButtonInteraction();
-            }
         }
 
         void ButtonView::render()
@@ -45,9 +42,7 @@ namespace UI
             sf::Vector2f mouse_position = sf::Vector2f(sf::Mouse::getPosition(*game_window));
 
             if (clickedButton(&image_sprite, mouse_position))
-            {
                 if (callback_function) callback_function();
-            }
         }
 
         bool ButtonView::clickedButton(sf::Sprite* button_sprite, sf::Vector2f mouse_position)

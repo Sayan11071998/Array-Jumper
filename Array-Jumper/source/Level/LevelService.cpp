@@ -45,17 +45,19 @@ namespace Level
 
 	void LevelService::loadNextLevel()
 	{
+		level_controller->loadNextLevel();
 	}
 
 	int LevelService::getCurrentLevelNumber()
 	{
-		return 0;
+		return level_controller->getCurrentLevelNumber();
 	}
 
 	void LevelService::resetLevels()
 	{
+		level_controller->reset();
 	}
-
+	
 	void LevelService::destroy()
 	{
 		delete(level_controller);

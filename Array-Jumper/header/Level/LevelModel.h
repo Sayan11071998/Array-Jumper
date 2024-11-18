@@ -20,16 +20,17 @@ namespace Level
 		const int number_of_level = LevelConfiguration::NUMBER_OF_LEVELS;
 		LevelConfiguration level_configuration;
 		int current_level_index;
-		
+	
 	public:
 		LevelModel();
 		~LevelModel();
 
 		BlockType getCurrentBoxValue(int currentPosition);
 
+		bool isLastLevel();
 		void loadNextLevel();
 		int getCurrentLevelNumber();
-		bool isLastLevel();
+
 		void reset();
 	};
 }

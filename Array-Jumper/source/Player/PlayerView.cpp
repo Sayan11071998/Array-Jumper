@@ -48,7 +48,6 @@ namespace Player
 
 	void PlayerView::initializePlayerImage()
 	{
-
 		player_image->initialize(Config::character_texture_path,
 			player_width,
 			player_height,

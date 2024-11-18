@@ -27,7 +27,7 @@ namespace UI
 			sf::String instructions[number_of_instructions] = { "Move with 'Left' and 'Right' arrow key",
 																"Hold 'Space' while moving to 'JUMP'",
 																"Your player will 'JUMP' forward or backward by the value of your current cell",
-																"Reach the target cell to 'Win' the game" };
+																"Reach the target cell to 'Win' the game"};
 
 			UIElement::ImageView* background_image;
 			UIElement::ButtonView* menu_button;

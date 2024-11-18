@@ -5,6 +5,7 @@
 namespace Player
 {
 	class PlayerController;
+	
 	class PlayerView
 	{
 	private:
@@ -30,7 +31,5 @@ namespace Player
 		void initialize();
 		void update();
 		void render();
-
 	};	
-}		
-
+}

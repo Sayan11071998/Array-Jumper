@@ -6,7 +6,6 @@ namespace Gameplay
 	class GameplayController
 	{
 	private:
-
 		bool isObstacle(Level:: BlockType value);
 		bool isEndBlock(Level::BlockType value);
 		void processObstacle();
@@ -18,7 +17,6 @@ namespace Gameplay
 		void gameOver();
 
 	public:
-
 		void intialize();
 		void update();
 		void render();

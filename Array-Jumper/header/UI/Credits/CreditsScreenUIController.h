@@ -8,11 +8,9 @@ namespace UI
 {
 	namespace Credits
 	{
-
 		class CreditsScreenUIController
 		{
 		private:
-
 			// Constants:
 			const sf::String game_title = "Outscal Presents - Array Jumper";
 			const float background_alpha = 85.f;

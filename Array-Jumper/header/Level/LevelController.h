@@ -29,4 +29,3 @@ namespace Level
 		void reset();
 	};
 }
-

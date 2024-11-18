@@ -10,7 +10,6 @@ namespace UI
 		using namespace Graphics;
 
 		UIView::UIView() = default;
-
 		UIView::~UIView() = default;
 
 		void UIView::initialize()
@@ -19,9 +18,9 @@ namespace UI
 			ui_state = UIState::VISIBLE;
 		}
 
-		void UIView::update() { }
+		void UIView::update() {}
 
-		void UIView::render() { }
+		void UIView::render() {}
 
 		void UIView::show()
 		{

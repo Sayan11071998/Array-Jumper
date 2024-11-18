@@ -1,5 +1,6 @@
 #pragma once
 #include "LevelModel.h"
+#include "LevelData.h"
 #include "LevelController.h"
 #include "../../header/UI/UIElement/ImageView.h"
 
@@ -8,7 +9,6 @@ namespace Level
 	class LevelView
 	{
 	private:
-		
 		sf::RenderWindow* game_window;
 		LevelController* level_controller;
 
@@ -38,7 +38,7 @@ namespace Level
 		void calculateBoxWidthHeight();
 		void calculateBoxSpacing();
 		UI::UIElement::ImageView* getBoxOverlayImage(BlockType block_type);
-
+	
 	public:
 		LevelView(LevelController* controller);
 		~LevelView();
@@ -48,7 +48,5 @@ namespace Level
 		void render();
 
 		BoxDimensions getBoxDimensions();
-		
 	};
 }
-
