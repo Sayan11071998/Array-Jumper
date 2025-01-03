@@ -15,3 +15,7 @@
 - **👨‍💻 C++ OOP:** Applied object-oriented principles to make the code more flexible and scalable.
 
 🌈 This project has been so rewarding, teaching me valuable lessons in game programming, problem-solving with data structures, and bringing designs to life. I’m even more inspired to build bigger and better games now! 🎉
+
+![Array_Jumper_01](https://github.com/user-attachments/assets/806a1917-831d-4fe6-aae7-858a825ede55)
+![Array_Jumper_02](https://github.com/user-attachments/assets/4d3141a6-b8c9-4bc4-a418-e9c3ae9aea76)
+![Array_Jumper_03](https://github.com/user-attachments/assets/438b4b70-0b7c-4b46-acd7-3ac4f0b3fc5d)
