@@ -49,7 +49,6 @@ Super excited to share my latest C++ project: **1D Array Jumper**! Built using S
 ---
 
 [![Watch the video](https://img.youtube.com/vi/IVSUP6pYOOg/maxresdefault.jpg)](https://youtu.be/IVSUP6pYOOg)
-
 ### [Gameplay Video](https://youtu.be/IVSUP6pYOOg)
 
 ![1D_Array_Jumper_01](https://github.com/user-attachments/assets/43773fa1-4476-4177-9d93-6821f15d614a)
