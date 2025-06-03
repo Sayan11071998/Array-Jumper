@@ -1,12 +1,12 @@
 # 🚀 1D Array Jumper 🎮
 
-## 🌟 Project Milestone
+## Project Milestone
 
 Super excited to share my latest C++ project: **1D Array Jumper**! Built using SFML for visual rendering, this simple yet challenging game takes the player on an adventure across a 1D array-like platform. The goal? Move, jump, and avoid obstacles to reach the end! This project has been an incredible learning journey, helping me solidify my understanding of data structures and game development.
 
 ---
 
-## 🎯 Game Highlights
+## Game Highlights
 
 - **Player Movement**  
   Move or jump based on the values in the platform array.
@@ -22,7 +22,7 @@ Super excited to share my latest C++ project: **1D Array Jumper**! Built using S
 
 ---
 
-## 📚 Key Takeaways
+## Key Takeaways
 
 - **Data Structures**  
   Strengthened my grasp on 1D arrays, array operations, and explored how STL vectors outperform raw arrays.
@@ -38,7 +38,7 @@ Super excited to share my latest C++ project: **1D Array Jumper**! Built using S
 
 ---
 
-## 🛠️ Technologies & Libraries
+##  Technologies & Libraries
 
 - **Language:** C++  
 - **Graphics & Audio:** SFML (Simple and Fast Multimedia Library)  
